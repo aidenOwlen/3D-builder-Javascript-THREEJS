@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shed builder company</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Page level plugin CSS-->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    
+    <!-- Custom styles CSS for this template-->
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+
+    .slidecontainer {
+  width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+#rmenuSide {
+    position:absolute;
+    z-index:265;
+
+}
+
+#gui { position: absolute; top: 2px; left: 2px }
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+            #myCanvas {
+    width: 100%;
+    height:100%;
+    position:fixed;
+   
+}
+
+#rmenuSide li {
+  list-style-type:none;
+}
+
+#rmenuObject li {
+  list-style-type:none;
+}
+
+#TopT {
+    width : 100%;
+}
+
+#rmenuSide.show {
+    z-index:1000;
+    position: absolute;
+    
+    border:solid white 2px;
+    background: rgba(0, 0, 0,0.5);
+    padding: 2px;
+    padding-right:34px;
+    display: block;
+    margin: 0;
+    list-style-type: none;
+    list-style: none;
+}
+
+#rmenuObject.show {
+    z-index:1000;
+    position: absolute;
+    border:solid white 2px;
+    background: rgba(0, 0, 0, 0.5);
+
+    padding: 2px;
+    padding-right:36px;
+    display: block;
+    margin: 0;
+    list-style-type: none;
+    list-style: none;
+}
+
+.hide {
+  display:none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width:100%;
+}
+.sticky .breadcrumb-section-5 {
+    max-width: 400px;
+    text-align: left;
+    padding-left: 0;
+}
+.sticky .breadcrumb-section-1 {
+    width: calc(100% - 400px);
+}
+body.sidebar-toggled footer.sticky-footer {
+position: fixed;
+}
+        </style>
+  </head>
+
+  <body id="page-top" class="sidebar-toggled">
+  <script>
+  function resize(){    
+    $("#canvas").outerHeight($(window).height()-$("#canvas").offset().top- Math.abs($("#canvas").outerHeight(true) - $("#canvas").outerHeight()));
+  }
+  $(document).ready(function(){
+    resize();
+    $(window).on("resize", function(){                      
+        resize();
+    });
+  });
+
+ function resize2(){    
+    $("#TopT").outerHeight($(window).height()-$("#TopT").offset().top- Math.abs($("#TopT").outerHeight(true) - $("#TopT").outerHeight()));
+  }
+  $(document).ready(function(){
+    resize();
+    $(window).on("resize", function(){                      
+        resize2();
+    });
+  });
+  </script>
+
+    <div id = "theTop">
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+      <!-- <a class="navbar-brand mr-1" href="index.html">Shed pictures</a> -->
+
+      <!--<button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+        <i class="fas fa-bars" style="font-size: 21px;"></i>
+      </button>-->
+
+      <!-- Navbar Search -->
+      <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0 center-logo">
+        <div class="input-group">
+          <h2 style = "color:white;"> Shed builder company </h2>
+          
+        </div>
+      </form>
+
+
+      <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+        <div class="input-group">
+         
+          <div class="input-group-append">
+            <!--
+            <button class="btn btn-primary" type="button">
+              <i class="fas fa-search"></i>
+            </button>
+          -->
+          </div>
+        </div>
+      </form>
+
+      <!-- Navbar -->
+      <ul class="navbar-nav ml-auto ml-md-0">
+        <li class="nav-item dropdown no-arrow mx-1">
+          <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fda-bell fa-fw"></i>
+            
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown no-arrow mx-1">
+          <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i onClick = "executeCode()" class="far fa-envelope"></i>
+            <!-- <span class="badge badge-danger">Contact us</span> -->
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user-circle fa-fw"></i>
+
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+            <a class="dropdown-item" href="#">Settings</a>
+            <a class="dropdown-item" href="#">Activity Log</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+          </div>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <ul class="sidebar navbar-nav toggled">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span id = "defaultClick">Default</span>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown data-1 show">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Style</span>
+          </a>
+          <div class="dropdown-menu show" aria-labelledby="pagesDropdown">
+            <a class = "dropdown-item" style = "text-align:center;font-style:italic;font-size:12px;font-weight:bold;border: 1px solid black;"><img src = "Textures/workshop.jpg" alt = "" onclick = "settingPath('Shed2')"><br>Standard wood workshop</a>
+            <a class = "dropdown-item" onclick = "settingPath('carriage')" style = "text-align:center;font-style:italic;font-size:12px;font-weight:bold;border: 1px solid black;"><img src = "Textures/Carriage_Shed.jpg" alt = ""><br>Standard wood carriage shed</a>
+
+            <a class = "dropdown-item" onclick = "settingPath('designerCarriage')" style = "text-align:center;font-style:italic;font-size:12px;font-weight:bold;border: 1px solid black;"><img src = "Textures/Carriage_Shed.jpg" alt = ""><br>Standard wood carriage shed : Designer</a>
+
+             <a class = "dropdown-item" onclick = "settingPath('highCarriage')" style = "text-align:center;font-style:italic;font-size:12px;font-weight:bold;border: 1px solid black;"><img src = "Textures/Carriage_Shed.jpg" alt = ""><br>Standard wood carriage shed : High Wall</a>
+            
+             
+
+             <a class = "dropdown-item" onclick = "settingPath('capecode')" style = "text-align:center;font-style:italic;font-size:12px;font-weight:bold;border: 1px solid black;"><img src = "Textures/Cape_Code.png" alt = ""><br>
+             Cape code</a>
+
+           
+
+             <a class = "dropdown-item" style = "text-align:center;font-style:italic;font-size:12px;font-weight:bold;border: 1px solid black;"><img src = "Textures/High_Wall_Barn.jpg" alt = "" onclick = "settingPath('highbarn')"><br>
+             High Wall Barn</a>
+
+             <a class = "dropdown-item" style = "text-align:center;font-style:italic;font-size:12px;font-weight:bold;border: 1px solid black;"><img src = "Textures/Mini_Barn.jpg" alt = "" onclick = "settingPath('minibarn')"><br>
+             Mini Barn</a>
+
+             <a class = "dropdown-item" style = "text-align:center;font-style:italic;font-size:12px;font-weight:bold;border: 1px solid black;"><img src = "Textures/Mini_Barn.jpg" alt = "" onclick = "settingPath('vinylbarn')"><br>
+             Mini Barn : vinyl </a>
+
+            
+
+             <a class = "dropdown-item" style = "text-align:center;font-style:italic;font-size:12px;font-weight:bold;border: 1px solid black;"><img src = "Textures/Lean-To.png" alt = "" onclick = "settingPath('leanto')"><br>
+             Lean To</a>
+             
+             <a class = "dropdown-item" onclick = "settingPath('cabana')" style = "text-align:center;font-style:italic;font-size:12px;font-weight:bold;border: 1px solid black;"><img src = "Textures/Cabana.jpg" alt = ""><br>Standard wood cabana</a>
+
+            </div>
+            
+		</li>
+        <li class="nav-item dropdown data-2">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Size & Layout</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <div id = "sizeleanto">
+            
+            
+            <a class="dropdown-item" id = "4x10" onclick = "addSize(4,10)">4x10</a>
+            <a class="dropdown-item"  id = "4x12" onclick = "addSize(4,12)">4x12</a>
+            <a class="dropdown-item"  id = "4x14" onclick = "addSize(4,14)">4x14</a>
+            <a class="dropdown-item"  id = "4x16" onclick = "addSize(4,16)">4x16</a>
+            </div>
+
+            <div id = "sizelow">
+            <a class="dropdown-item" id = "6x8" onclick = "addSize(6,8)">6x8</a>
+              <a class="dropdown-item" id = "6x10" onclick = "addSize(6,10)">6x10</a>
+              <a class="dropdown-item" id = "6x12" onclick = "addSize(6,12)">6x12</a>
+              <a class="dropdown-item" id = "6x14" onclick = "addSize(6,14)">6x14</a>
+              <a class="dropdown-item" id = "8x8" onclick = "addSize(8,8)">8x8</a>
+            <a class="dropdown-item" id = "8x10" onclick = "addSize(8,10)">8x10</a>
+            <a class="dropdown-item" id = "8x12" onclick = "addSize(8,12)">8x12</a>
+            <a class="dropdown-item" id = "8x14" onclick = "addSize(8,14)">8x14</a>
+             <a class="dropdown-item" id = "8x16" onclick = "addSize(8,16)">8x16</a>
+              <a class="dropdown-item" id = "10x10" onclick = "addSize(10,10)">10x10</a>
+            
+            <a class="dropdown-item" id = "10x12" onclick = "addSize(10,12)">10x12</a>
+            <a class="dropdown-item"  id = '10x14' onclick = "addSize(10,14)">10x14</a>
+            
+            <a class="dropdown-item" id = '10x16' onclick = "addSize(10,16)">10x16</a>
+            <a class="dropdown-item" id = '10x18' onclick = "addSize(10,18)">10x18</a>
+            <a class="dropdown-item"  id = '10x20' onclick = "addSize(10,20)">10x20</a>
+            </div>
+            <div id="sizehigh">
+            <a class="dropdown-item"  id = '12x12' onclick = "addSize(12,12)">12x12</a>
+               <a class="dropdown-item"  id = '12x14' onclick = "addSize(12,14)">12x14</a>
+            <a class="dropdown-item"  id = '12x16' onclick = "addSize(12,16)">12x16</a>
+
+            <a class="dropdown-item"  id = '12x18' onclick = "addSize(12,18)">12x18</a>
+            <a class="dropdown-item"  id = '12x20' onclick = "addSize(12,20)">12x20</a>
+
+            <a class="dropdown-item"  id = '12x22' onclick = "addSize(12,22)">12x22</a>
+            <a class="dropdown-item"  id = '12x24' onclick = "addSize(12,24)">12x24</a>
+            <a class="dropdown-item"  id = '12x26' onclick = "addSize(12,26)">12x26</a>
+            <a class="dropdown-item"  id = '12x28' onclick = "addSize(12,28)">12x28</a>
+            <a class="dropdown-item"  id = '12x32' onclick = "addSize(12,32)">12x32</a>
+            <a class="dropdown-item"  id = '12x34' onclick = "addSize(12,34)">12x34</a>
+            <a class="dropdown-item"  id = '12x36' onclick = "addSize(12,36)">12x36</a>
+            <a class="dropdown-item" id = "14x20" onclick = "addSize(14,20)">14x20</a>
+            </div>
+             <div id = highSIZES>
+              <a class="dropdown-item"  id = "12x40" onclick = "addSize(12,40)">12x40</a>
+            
+              <a class="dropdown-item"  id = "14x24" onclick = "addSize(14,24)">14x24</a>
+              <a class="dropdown-item"  id = "14x28" onclick = "addSize(14,28)">14x28</a>
+              <a class="dropdown-item"  id = "14x32" onclick = "addSize(14,32)">14x32</a>
+              <a class="dropdown-item"  id = "14x36" onclick = "addSize(14,36)">14x36</a>
+              <a class="dropdown-item"  id = "14x40" onclick = "addSize(14,40)">14x40</a>
+              <a class="dropdown-item"  id = "Garage" style = "color:blue" onclick = "Garage()">Garage</a>
+            </div>
+            <div id = "highwal">
+            <a class = "dropdown-item" onclick = "higherWall('high')">Higher wall</a>
+            <a class = "dropdown-item" onclick = "higherWall('low')">Low wall</a>
+
+            </div>
+          </div>
+          
+        </li>
+        <li class="nav-item dropdown data-3">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Sidings</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic">Wood:</h6>
+            <a class="dropdown-item" onclick = "duraTemp()">Duratemp Siding</a>
+           
+            <h4 class="dropdown-header" style = "color:black;font-size:12px;font-style:bold"> White pin:</h6>
+            <a class="dropdown-item" onclick = "tongue()">Tongue & grooven</a>
+            <a class="dropdown-item" onclick = "shiplap()">Shiplap</a>
+             <a class="dropdown-item" onclick = "boardd()">Board & Batten</a>
+             <h4 class="dropdown-header" style = "color:black;font-size:12px;font-style:bold">L.P. products :</h6>
+             <a class="dropdown-item" onclick ="smart1()">3/8 SmartSide Panel</a>
+            <a class="dropdown-item" onclick = "smart2()">7/16 SmartSide Panel </a>
+            <a class="dropdown-item" onclick = "smart3()"> SmartSide Lap siding-5</a>
+            <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic">Vinyl :</h6>
+            <a class="dropdown-item" onclick = "vinyl1()">Straight Edge Shingles </a>
+            <a class="dropdown-item"  onclick = "vinyl2()">Straight Edge Shakes</a>
+            <a class="dropdown-item"  onclick = "D4()">D4</a>
+            <a class="dropdown-item"  onclick = "D4D()">D4D</a>
+             <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic">Speciality products : </h6>
+            <a class="dropdown-item" onclick = "hardie()">HardiePlank Lap Siding </a>
+            <a class="dropdown-item"  onclick = "cedar()">Cedar Shakes</a>
+            <a class="dropdown-item"  onclick = "stone()">Stone</a>
+            <a class="dropdown-item"  onclick = "charWood()">CharWood</a>
+
+          </div>
+		
+        
+        <li class="nav-item dropdown data-4" id = "roofing" onclick = "checkout()">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Roof</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+             <h6 class="dropdown-header" style = "color:blue;font-style:italic;font-size:18px">Roofing material :</h6>
+           <a class = "dropdown-item" style = "text-align:center;font-style:italic;font-size:12px;font-weight:bold;border: 1px solid black;"><img src = "Textures/architecturalShinglel.png" alt = "" onclick = "architecturalShingles()"><br>30 year architectural shingle</a>
+            
+           <a class = "dropdown-item" style = "text-align:center;font-style:italic;font-size:12px;font-weight:bold;border: 1px solid black;"><img src = "Textures/metall.jpg" alt = "" onclick = "metalShingles()"><br>Metal</a>
+            <div class="dropdown-divider"></div>
+            <div id = "highbarn roof">
+             <a class="dropdown-item" onclick = "gablePeak('Right')">Gable Peak right</a>
+             <a class="dropdown-item" id = "peakLeft" onclick = "gablePeak('Left')">Gable Peak left</a>
+             <a class="dropdown-item" id ="peakStandard" onclick = "gablePeak('')">Standard</a>
+             <a class="dropdown-item" onclick = "gablePeak('Both')">Both sides</a>
+             <a class="dropdown-item" onclick = "gablePeak('Designer')">Designer</a>
+             <a class="dropdown-item"  onclick = "gablePeak('7gable')">7" Gable overhang</a>
+             </div>
+
+               <div id = "overhangs">
+             <h6 class="dropdown-header"  style = "color:blue;font-style:italic">Overhangs</h6>
+            <a class="dropdown-item" onclick = "loadingoverhango('312inch')">3.5 inch Gable overhang</a>
+            <a class="dropdown-item" onclick = "loadingoverhango('horizontal')">3.5 inch Horizontal Gable overhang</a>
+            <a class="dropdown-item" onclick = "loadingoverhango('7inch')">Std 7 inch Gable overhang</a>
+            <a class="dropdown-item" onclick = "loadingoverhango('7horizontal')">7 inch Horizontal overhang</a>
+            <a class="dropdown-item" onclick = "loadingoverhango('10inch')">10 inch overhang</a>
+            <a class="dropdown-item" onclick = "loadingMiratec('miratec','changeMe')">With miratec</a>
+            <a class="dropdown-item" onclick = "deleteoverhang('miratec')">Without miratec</a>
+            <a class="dropdown-item" onclick = "deleteoverhang('overhangs')">None</a>
+            </div>
+
+            <div id = "overhangsCarriage">
+              <h6 class="dropdown-header" style = "color:blue;font-style:italic">Overhangs</h6>
+             <a class="dropdown-item" onclick = "loadingoverhangoCarriage('3')">3 inch overhang</a>
+             <a class="dropdown-item" onclick = "loadingoverhangoCarriage('3horizontal')">3 inch horizontal overhang</a>
+             <a class="dropdown-item" onclick = "loadingoverhangoCarriage('7')">7 inch overhang</a>
+             <a class="dropdown-item" onclick = "loadingoverhangoCarriage('10')">10 inch overhang</a>
+             <a class="dropdown-item" id = 'withMir' onclick = "loadingMiratecCarriage('miratec','changeMe')">With miratec</a>
+            <a class="dropdown-item" id = 'noMir' onclick = "deleteoverhang('miratec')">Without miratec</a>
+            <a class="dropdown-item" id = 'delOv' onclick = "deleteoverhangCarriage()">None</a>
+            </div>
+            <div id = "carriageDesignerOver">
+              <h6 class="dropdown-header" style = "color:blue;font-style:italic">Overhangs</h6>
+               <a class="dropdown-item" onclick = "loadingoverhangoCarriage('10')">10 inch overhang</a>
+            </div>
+
+            <div class="dropdown-divider"></div>
+             <div id = "pitch">
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic">Pitch</h6>
+            <a class="dropdown-item" onclick = "roofPitch('5','yes')">5</a> 
+            <a class="dropdown-item" onclick = "roofPitch('6','yes')">6</a>
+            <a class="dropdown-item" onclick = "roofPitch('7','yes')">7</a>
+            <a class="dropdown-item" onclick = "roofPitch('8','yes')">8</a>
+            <a class="dropdown-item" onclick = "roofPitch('9','yes')">9</a>
+            <a class="dropdown-item" onclick = "roofPitch('10','yes')">10</a>
+            <a class="dropdown-item" onclick = "roofPitch('12','yes')">12</a> 
+            <!--<a class="dropdown-item" onclick = "roofPitch(0.8)">8</a> -->
+            </div>
+            <!--<a class="dropdown-item" onclick = "roofPitch(0.8)">8</a> -->
+
+             <div id = "dormercape">
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic">Dormer</h6>
+            <a class="dropdown-item" onclick = "loadingcapeDormer('cape')">Standard dormer</a> 
+            <a class="dropdown-item" onclick = "loadingcapeDormer('capeWide')">Wide dormer</a>
+            
+            </div>
+
+             <div id = "dormer">
+            <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic">Shed dormer</h6>
+             <a class="dropdown-item" onclick = "ldormerr('6')">6’ (2 windows)</a> 
+             <a class="dropdown-item" onclick = "ldormerr('8')">8’ (3 windows)</a> 
+             <a class="dropdown-item" onclick = "ldormerr('10')">10’ (4 windows)</a> 
+             <a class="dropdown-item" onclick = "ldormerr('12')">12’ (4 windows)</a> 
+              <a class="dropdown-item" onclick = "deleteDormer()">None</a> 
+             <a class="dropdown-item" onclick = "loadDormerWin('model1','alone')">standard</a> 
+             <a class="dropdown-item" onclick = "loadDormerWin('model2','alone')">vinyl</a> 
+             </div>
+
+           <div id = "shingleColor">
+          <h6 class="dropdown-header" style = "color:blue;font-style:italic;font-size:18px">Shingles color :</h6>
+          <a class="dropdown-item" onclick = "architecturalShingles()">Standard</a>
+          <a class="dropdown-item" onclick = "charcoalS()">Charcoal</a>
+            <a class="dropdown-item" onclick = "WWS()">Weathered Wood</a>
+            <a class="dropdown-item" onclick = "pewterS()">Pewter Gray</a>
+            
+            <a class="dropdown-item" onclick = "shakewoodS()">Shakewood</a>
+            <a class="dropdown-item"  onclick = "williamS()">Williamsburg Slate</a>
+             
+            <a class="dropdown-item" onclick = "barkS()">Barkwood </a>
+            <a class="dropdown-item"  onclick = "foxS()">Fox Hollow Gray</a>
+            <a class="dropdown-item"  onclick = "hickoryS()">Hickory</a>
+            <a class="dropdown-item"  onclick = "archiS()">Architectural</a>
+            <a class="dropdown-item"  onclick = "blueS()" style = "background-color:#5c6678">Blue</a>
+            <a class="dropdown-item"  onclick = "redS()" style = "background-color:#664845">Red</a>
+            <a class="dropdown-item"  onclick = "greenS()" style = "background-color:#4e5f52">Green</a>
+          </div>
+            <div id = "metalColor">
+             <h6 class="dropdown-header" style = "color:blue;font-style:italic;font-size:18px">Metal color :</h6>
+          
+          <a class="dropdown-item" onclick = "metalColor(0xf4f4f4)">Bright White</a>
+          <a class="dropdown-item" onclick = "metalColor(0xcac3a7)">Light Stone</a>
+          <a class="dropdown-item" onclick = "metalColor(0xf5f5dc)">Beige</a>
+          <a class="dropdown-item" onclick = "metalColor(0x845c40)">Clay</a>
+         <a class="dropdown-item" onclick = "metalColor(0xd2b48c)">Tan</a>
+          <a class="dropdown-item" onclick = "metalColor(0xE3DAC9)">Bone White</a>
+          <a class="dropdown-item" onclick = "metalColor(0xB2BEB5)">Ash Gray</a>
+          <a class="dropdown-item" onclick = "metalColor(0x8E9294)">Pewter Gray</a>
+          <a class="dropdown-item" onclick = "metalColor(0x464646)">Charcoal</a>
+          <a class="dropdown-item" onclick = "metalColor(0xcd7f32)">Bronze</a>
+          <a class="dropdown-item" onclick = "metalColor(0xff2400)">Scarlet red</a>
+          <a class="dropdown-item" onclick = "metalColor(0x7c0a02)">Barn red</a>
+          <a class="dropdown-item" onclick = "metalColor(0x7C4842)">Colonial Red</a>
+          <a class="dropdown-item" onclick = "metalColor(0x800020)">Burgundy</a>
+          <a class="dropdown-item" onclick = "metalColor(0x654321)">Brown</a>
+          <a class="dropdown-item" onclick = "metalColor(0xD4AF37)">Gold</a>
+          <a class="dropdown-item" onclick = "metalColor(0x639283)">Patina Green</a>
+          <a class="dropdown-item" onclick = "metalColor(0x83b81a)">Avocado Green</a>
+          <a class="dropdown-item" onclick = "metalColor(0x014421)">Forest Green</a>
+          <a class="dropdown-item" onclick = "metalColor(0x2C493F)">Evergreen</a>
+          <a class="dropdown-item" onclick = "metalColor(0x6A5ACD)">Slate blue</a>
+          <a class="dropdown-item" onclick = "metalColor(0x00B2FF)">Gallery blue</a>
+          <a class="dropdown-item" onclick = "metalColor(0x00008b)">Dark blue</a>
+          <a class="dropdown-item" onclick = "metalColor(0x43464B)">Black</a>
+        </div>
+
+</div>
+        </li>
+        <li class="nav-item dropdown data-5" onclick = "checkout()">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false" onclick ="transparenttt()">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Floor</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+             
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic">Joists</h6>
+            <a class="dropdown-item"  onclick = "loadingFloorFraming('framing162')">16" O.C ( standard )</a>
+            <a class="dropdown-item" onclick = "loadingFloorFraming('framing122')">12" O.C</a>
+            <a class="dropdown-item"  onclick = "loadingFloorFraming('framing82')">8" O.C</a>
+            <a class="dropdown-item"  onclick = "loadingFloorFraming('framing1622')">2x6 floor joists</a>
+             <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic">Plywood</h6>
+            <a class="dropdown-item" onclick = "loadingPlywood()">Tongue & Groove</a>
+            <a class="dropdown-item"  onclick = "foamF()">Foam</a>
+            <a class="dropdown-item" onclick = "noFloor()">No floor</a>
+             <a id = "4x4" class="dropdown-item" onclick = "no4x4()">No 4x4</a>
+            
+            </div>
+        </li>
+		<li class="nav-item dropdown data-6" id = "doors">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span >Doors</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+           <h6 class="dropdown-header" onclick="standardDoor()" style = "color:blue;font-style:italic">Standard door</h6>
+        
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic" onclick = "doubleDoorr()">Double door 4'</h6>
+             <div id = "doubleDoor">
+              
+            <h6 class="dropdown-header" style = "font-style:italic">Trim</h6>
+            <a class="dropdown-item" onclick = "doubleOutside('transom2.5')">Transom Window 2.5</a>
+            <a class="dropdown-item" onclick = "doubleOutside('transom3.5')">Transom Window 3.5</a>
+            <a class="dropdown-item" onclick = "doubleOutside('cornerTrim')">45 corner trim</a>
+
+            <a class="dropdown-item" onclick = "doubleOutside('Wide')">Trim Wide</a>
+
+             <h6 class="dropdown-header" style = "font-style:italic">Double X</h6>
+            <a class="dropdown-item" onclick = "doubleTrim('wideX')">Wide X</a>
+            <a class="dropdown-item" onclick = "doubleTrim('standardX')">Standard with X</a>
+            <a class="dropdown-item" onclick = "doubleTrim('transparent')">None</a>
+            <h6 class="dropdown-header" style = "font-style:italic">Hinges</h6>      
+            <a class="dropdown-item" onclick = "doubleHinges('hinges6')">6 inch Decorative</a>
+            <a class="dropdown-item" onclick = "doubleHinges('hinges12')">12 inch decorative</a>
+          </div>
+
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic" onclick = "fiberglass('fiberGlass1')">Fiberglass Double 54 inch</h6>
+
+            <div id = "fiberGlass">
+               <h6 class="dropdown-header" style = "font-style:italic">Trim</h6>
+
+               <h6 class="dropdown-header" style = "font-style:italic">Door</h6>
+               <a class="dropdown-item" onclick = "fiberglassDoor('fiberGlass1')">Fiberglass Double 54 inch</a>
+            <a class="dropdown-item" onclick = "fiberglassDoor('fiberGlass2')">Fiberglass Double 54 inch-2</a>
+
+
+            <a class="dropdown-item" onclick = "FiberOut('outside25')">2.5 Outside Trim</a>
+            <a class="dropdown-item" onclick = "FiberOut('outside35')">3.5 Outside Trim</a>
+    
+            <h6 class="dropdown-header" style = "font-style:italic">Hinges</h6>
+            <a class="dropdown-item" onclick = "FiberHinges('hinges6')">6 inch decorative </a>
+            <a class="dropdown-item" onclick = "FiberHinges('stdHinges')">Std Hinges</a>
+              
+            </div>
+
+           
+              <h6 class="dropdown-header" style = "color:blue;font-style:italic" onclick = "steeldoor()">Steel Double 54 inch</h6>
+             <div id = "steelDoor">
+               <h6 class="dropdown-header" style = "font-style:italic">Hinges</h6>
+            <a class="dropdown-item" onclick = "SteelHinges('hinges6')">6 inch decorative </a>
+            <a class="dropdown-item" onclick = "SteelHinges('stdHinges')">Std hinges</a>
+            <div class="dropdown-divider"></div>
+            
+          </div>
+           <h6 class="dropdown-header" style = "color:blue;font-style:italic" onclick = "steeldoor()">Steel Double 54 inch</h6>
+             <div id = "steelDoor">
+               <h6 class="dropdown-header" style = "font-style:italic">Hinges</h6>
+            <a class="dropdown-item" onclick = "SteelHinges('hinges6')">6 inch decorative </a>
+            <a class="dropdown-item" onclick = "SteelHinges('stdHinges')">Std hinges</a>
+            <div class="dropdown-divider"></div>
+            
+          </div>
+           <h6 class="dropdown-header" style = "color:blue;font-style:italic">Add Door</h6>
+            <a class="dropdown-item" onclick = "addFrontDoor()">Front door</a>
+             <a class="dropdown-item" onclick = "addBackDoor()">Back door</a>
+             <a class="dropdown-item" onclick = "addLeftDoor()">Side Left door</a>
+             <a class="dropdown-item" onclick = "addRightDoor()">Side Right door</a>
+
+           
+
+           
+          </div>
+
+        </li>
+        <li class="nav-item dropdown data-7" id = "windows">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Windows</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+           <h6 class="dropdown-header" style = "color:blue;font-style:italic">Size</h6>
+            <a class="dropdown-item" onclick = "applySize(18,27)">18x27</a>
+            <a class="dropdown-item" onclick = "applySize(24,27)">24x27</a>
+            <a class="dropdown-item" onclick = "applySize(18,36)">18x36</a>
+            <a class="dropdown-item" onclick = "applySize('big','big')">24x36</a>
+             <a class="dropdown-item" onclick = "applySize(30,36)">insulated : 30x36</a>
+            <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic">Trim</h6>
+            <a class="dropdown-item" onclick = "loadingTrimP('Trim Std Straight')">Trim Std Straight</a>
+            <a class="dropdown-item" onclick = "loadingTrimP('Trim Std Curved')">Trim Std Curved</a>
+            <a class="dropdown-item" onclick = "loadingTrimP('Trim Wide Curved')">Trim Wide Curved</a>
+            <a class="dropdown-item" onclick = "loadingTrimP('Trim Wide Straight')">Trim Wide Straight</a>
+             <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic">Shutters</h6>
+            <a class="dropdown-item" onclick = "loadingTrimP('Standard Shutters')">Standard Shutters</a>
+            <a class="dropdown-item" onclick = "loadingTrimP('Shutters Z Style')">Shutters Z style</a>
+            <a class="dropdown-item" onclick = "loadingTrimP('Shutters Classic Wide')">Shutters Classic Wide</a>
+            <div class="dropdown-divider"></div>
+              <a class="dropdown-item" onclick = "loadingWinType('Low Wall Window')">Low Wall window </a>
+            <a class="dropdown-item" onclick = "loadingWinType('Standard Window')">Standard Window</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" onclick = "loadingBoxP()">Window Box ( 18 inch )</a>
+              <div class="dropdown-divider"></div>
+            <a class="dropdown-item" onclick = "loadingTrimP('Vinyl standard')">Vinyl Standard</a>
+             <a class="dropdown-item" onclick = "loadingTrimP('Vinyl Raised Panel')">Vinyl Raised Panel</a>
+             <div class="dropdown-divider"></div>
+             <h6 class="dropdown-header" style = "color:blue;font-style:italic">Add window</h6>
+            <a class="dropdown-item" onclick = "addFrontWindow()">Front window</a>
+             <a class="dropdown-item" onclick = "addBackWindow()">Back window</a>
+             <a class="dropdown-item" onclick = "addLeftWindow()">Side Left window</a>
+             <a class="dropdown-item" onclick = "addRightWindow()">Side Right window</a>
+
+            
+          </div>
+          
+        <li class="nav-item dropdown data-8" onclick = "checkout()">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Trim</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic">Corners</h6>
+            <a class="dropdown-item" id ="metalcorner" onclick = "loadingMetalCorners()">Metal Corners</a>
+            <a class="dropdown-item" onclick = "loadingStandardMiratec()">Standard Miratec</a>
+            <a class="dropdown-item" onclick = "loadingWideMiratec()">Wide Miratec</a>
+            <a class="dropdown-item" onclick = "loadingExtraWideMiratec()">Extra Wide Miratec</a>
+            <div class="dropdown-divider"></div>
+           
+            
+            
+          </div>
+        </li>
+        <li class="nav-item dropdown data-9" id = "ventil" onclick = "checkout()">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Ventilation</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic">Gable Vents</h6>
+            <a class="dropdown-item" onclick = "loadingVentilation('azekTrim')">12x12 Azek Trim</a>
+            <a class="dropdown-item" onclick = "loadingVentilation('paintedMetal')">8x16 Painted Metal</a>
+            <a class="dropdown-item" onclick = "loadingVentilation('wood')">12x12 Wood</a>
+            <a class="dropdown-item" onclick = "loadingVentilation('azekCurved')">12x12 Azek Curved</a>
+            <a class="dropdown-item" onclick = "loadingVentilation('8x8metal')">8x8 metal</a>
+            <a class="dropdown-item" onclick = "loadingVentilation('8x16metalend')">8x16 metal end</a>
+            <a class="dropdown-item" onclick = "loadingVentilation('12x12vinyl')">12x12 vinyl</a>
+            <a class="dropdown-item" onclick = "loadingVentilation('12x18')">12x18</a>
+            <a class="dropdown-item" onclick = "roofVents()" style = "color:blue">roof vents</a>
+            <a class="dropdown-item" onclick = "deleteVentilation()">None</a>
+
+
+           
+          </div>
+        
+      
+
+        </li>
+         <li class="nav-item dropdown" id = "ventilCabana" onclick = "checkout()">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fasba3 fa-fw fa-folder"></i>
+            <span>Ventilation</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic">Gable Vents</h6>
+            <a class="dropdown-item" onclick = "addventCabana('azekTrim')">12x12 Azek Trim</a>
+            <a class="dropdown-item" onclick = "addventCabana('paintedMetal')">8x16 Painted Metal</a>
+            <a class="dropdown-item" onclick = "addventCabana('wood')">12x12 Wood</a>
+            <a class="dropdown-item" onclick = "addventCabana('azekCurved')">12x12 Azek Curved</a>
+            <a class="dropdown-item" onclick = "addventCabana('8x8metal')">8x8 metal</a>
+            <a class="dropdown-item" onclick = "addventCabana('8x16metalend')">8x16 metal end</a>
+            <a class="dropdown-item" onclick = "addventCabana('12x12vinyl')">12x12 vinyl</a>
+            <a class="dropdown-item" onclick = "addventCabana('12x18')">12x18</a>
+            <a class="dropdown-item" style = "color:blue">roof vents</a>
+            <a class="dropdown-item" onclick = "deleteVentilationCabana()">None</a>
+
+
+        
+           
+          </div>
+        </li>
+        <li class="nav-item dropdown" id = "ventilminibarn" onclick = "checkout()">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fasba3 fa-fw fa-folder"></i>
+            <span>Ventilation</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <h6 class="dropdown-header" style = "color:blue;font-style:italic">Gable Vents</h6>
+            <a class="dropdown-item" onclick = "loadingVentilation('paintedMetal')">8x16 Painted Metal</a>
+            <a class="dropdown-item" onclick = "loadingVentilation('8x8metal')">8x8 metal</a>
+            <a class="dropdown-item" onclick = "loadingVentilation('8x16metalend')">8x16 metal end</a>
+            <a class="dropdown-item" style = "color:blue">roof vents</a>
+            <a class="dropdown-item" onclick = "deleteVentilation()">None</a>
+
+
+        
+           
+          </div>
+        
+      
+
+        </li>
+        
+        <li class="nav-item dropdown data-10" onclick = "checkout()">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Colors</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <h6 class="dropdown-header" style = "color:blue;font-style:bold;text-align:center">SIDING</h6>
+            <a class="dropdown-item" href="login.html" id ="fix" style = "color:red;background-color:gray;font-style:bold;text-align:center"></a>
+
+            <div id ="Duratemp/L.P/HardyPlank">
+                       <a class="dropdown-item" onclick = "sidingColor(0xffffff)">White</a>
+               <a class="dropdown-item"  onclick = "sidingColor(0xEEE8D6)">Navajo White</a>
+               <a class="dropdown-item"  onclick = "sidingColor(0xF5F8DD)">Beige</a>
+                <a class="dropdown-item"  onclick = "sidingColor(0xD2B48C)">Tan</a>
+                <a class="dropdown-item" onclick = "sidingColor(0xd3d3d3)">Light Gray</a>
+                <a class="dropdown-item"  onclick = "sidingColor(0xb5651d)">Light Brown</a>
+           
+                <a class="dropdown-item"  onclick = "sidingColor(0x996633)">Clay</a>
+
+                <a class="dropdown-item"  onclick = "sidingColor(0x90EE90)">Light Green</a>
+                <a class="dropdown-item"  onclick = "sidingColor(0x006400)">Dark Green</a>
+                <a class="dropdown-item"  onclick = "sidingColor(0x595959)">Dark Gray</a>
+                <a class="dropdown-item"  onclick = "sidingColor(0x654321)">Dark Brown</a>
+                <a class="dropdown-item"  onclick = "sidingColor(0x2C3539)">Black</a>
+            </div>
+
+          <div id ="White pine">
+             <a class="dropdown-item" onclick = "sidingColor(0xF8F7ED)">Natural</a>
+              <a class="dropdown-item" onclick = "sidingColor(0xC29467)">Honey teak</a>
+               <a class="dropdown-item" onclick = "sidingColor(0xB38267)">Amberwood</a>
+                <a class="dropdown-item" onclick = "sidingColor(0x52312F)">Jarrah brown</a>
+                 <a class="dropdown-item" onclick = "sidingColor(0xB4AC98)">Beechwood gray</a>
+                  <a class="dropdown-item" onclick = "sidingColor(0x4D4B40)">Spanish Moss</a>
+                   <a class="dropdown-item" onclick = "sidingColor(0x5B5A5E)">Black canyon</a>
+                    <a class="dropdown-item" onclick = "sidingColor(0x5C3B37)">Pilgrim red</a>
+          </div>
+
+
+ <div id ="L.P">
+            <a class="dropdown-item" onclick = "sidingColor(0xc95a49)">Cedar</a>
+            <a class="dropdown-item" onclick = "sidingColor(0xe3b061)">Butternut</a>
+            <a class="dropdown-item" onclick = "sidingColor(0x954535)">Chestnut brown</a>
+            <a class="dropdown-item" onclick = "sidingColor(0xD5A149)">Honey gold</a>
+            <a class="dropdown-item" onclick = "sidingColor(0xd2d5cc)">Driftwood</a>
+            <a class="dropdown-item" onclick = "sidingColor(0x282C34)">Ebony</a>
+            <a class="dropdown-item" onclick = "sidingColor(0xc9aa88)">Natural treat</a>
+            <a class="dropdown-item" onclick = "sidingColor(0x737172)">Natural walk</a>
+            <a class="dropdown-item" onclick = "sidingColor(0xc04000)">red mahogany</a>
+            <a class="dropdown-item" onclick = "sidingColor(0xAB4E52)">redwood</a>
+            <a class="dropdown-item" onclick = "sidingColor(0x7a372a)">redcedar</a>
+          </div>
+
+         <div id ="Vinyl">
+            <a class="dropdown-item" onclick = "sidingColor(0xffffff)">White</a>
+            <a class="dropdown-item" onclick = "sidingColor(0x969491)">Bright gray</a>
+            <a class="dropdown-item" onclick = "sidingColor(0xD8CEB8)">Classic linen</a>
+            <a class="dropdown-item" onclick = "sidingColor(0x0B986E)">Prairie green</a>
+            <a class="dropdown-item" onclick = "sidingColor(0xF7D298)">Antique ivory</a>
+            <a class="dropdown-item" onclick = "sidingColor(0xEFDECD)">Almond</a>
+            <a class="dropdown-item" onclick = "sidingColor(0x786d5f)">Sandstone</a>
+            <a class="dropdown-item"  onclick = "sidingColor(0x996633)">Clay</a>
+            <a class="dropdown-item" onclick = "sidingColor(0x9AAB89)">Sage</a>
+            <a class="dropdown-item" onclick = "sidingColor(0x6666CC)">Slate blue</a>
+          </div>
+
+
+            <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header" style = "color:blue;font-style:bold;text-align:center">Face and rake</h6>
+            <a class="dropdown-item" href="login.html" id ="fix" style = "color:red;background-color:gray;font-style:bold;text-align:center"></a>
+
+            <div id = "facecape">
+            <div id ="Duratemp/L.P/HardyPlank">
+                       <a class="dropdown-item" onclick = "faceColor(0xffffff)">White</a>
+               <a class="dropdown-item"  onclick = "faceColor(0xEEE8D6)">Navajo White</a>
+               <a class="dropdown-item"  onclick = "faceColor(0xF5F8DD)">Beige</a>
+                <a class="dropdown-item"  onclick = "faceColor(0xD2B48C)">Tan</a>
+                <a class="dropdown-item" onclick = "faceColor(0xd3d3d3)">Light Gray</a>
+                <a class="dropdown-item"  onclick = "faceColor(0xb5651d)">Light Brown</a>
+           
+                <a class="dropdown-item"  onclick = "faceColor(0x996633)">Clay</a>
+
+                <a class="dropdown-item"  onclick = "faceColor(0x90EE90)">Light Green</a>
+                <a class="dropdown-item"  onclick = "faceColor(0x006400)">Dark Green</a>
+                <a class="dropdown-item"  onclick = "faceColor(0x595959)">Dark Gray</a>
+                <a class="dropdown-item"  onclick = "faceColor(0x654321)">Dark Brown</a>
+                <a class="dropdown-item"  onclick = "faceColor(0x2C3539)">Black</a>
+                <a class="dropdown-item"  onclick = "faceColor(0xa3a3a3)">Default</a>
+            </div>
+          </div>
+              
+          
+            <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header" style = "color:blue;font-style:bold;text-align:center">TRIM</h6>
+            <a class="dropdown-item" onclick = "trimColor(0xffffff)">White</a>
+            <a class="dropdown-item"  onclick = "trimColor(0xEEE8D6)">Navajo White</a>
+            <a class="dropdown-item"  onclick = "trimColor(0xF5F8DD)">Beige</a>
+            <a class="dropdown-item"  onclick = "trimColor(0xD2B48C)">Tan</a>
+         
+            <a class="dropdown-item" onclick = "trimColor(0xd3d3d3)">Light Gray</a>
+            <a class="dropdown-item"  onclick = "trimColor(0xb5651d)">Light Brown</a>
+
+            <a class="dropdown-item"  onclick = "trimColor(0x996633)">Clay</a>
+
+            <a class="dropdown-item"  onclick = "trimColor(0x90EE90)">Light Green</a>
+            <a class="dropdown-item"  onclick = "trimColor(0x006400)">Dark Green</a>
+            <a class="dropdown-item"  onclick = "trimColor(0x595959)">Dark Gray</a>
+            <a class="dropdown-item"  onclick = "trimColor(0x654321)">Dark Brown</a>
+            <a class="dropdown-item"  onclick = "trimColor(0x000080)">Navy blue</a>
+            <a class="dropdown-item"  onclick = "trimColor(0x2C3539)">Black</a>
+
+            <a class="dropdown-item"  onclick = "trimColor(0xfaf0e6)">Linen</a>
+            <a class="dropdown-item"  onclick = "trimColor(0xfffff0)">Ivory</a>
+            <a class="dropdown-item"  onclick = "trimColor(0xefdecd)">Almond</a>
+            <a class="dropdown-item"  onclick = "trimColor(0xEFC17C)">Prairie wheat</a>
+            <a class="dropdown-item"  onclick = "trimColor(0xD7C6AB)">Sandstone</a>
+            <a class="dropdown-item"  onclick = "trimColor(0x62676A)">Heritage Gray</a>
+            <a class="dropdown-item"  onclick = "trimColor(0x800020)">Burgundy</a>
+
+            
+
+         
+            
+
+
+        </li>
+        
+        <li class="nav-item dropdown data-11" id = "layout" onclick = "checkout()">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Layout</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            
+             <a class="dropdown-item" onclick = "testinng()">Floor plan 1</a>
+            <a class="dropdown-item" onclick = "testyF()">Floor plan 2</a>
+            <a class="dropdown-item" onclick = "floorPlan3()" >Floor plan 3</a>
+            
+            
+            <a class="dropdown-item" onclick = "FloorPlan4()">Floor plan 4 </a>
+            
+            
+          </div>
+          <script>
+            function FloorPlan4() {
+              var xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function () {
+                if ( this.readyState == 4 && this.status == 200) {
+                  alert("DONE")
+                }
+              };
+              xhttp.open("GET","testo.php?q=hello",true);
+              xhttp.send();
+            }
+          </script>
+        </li>
+        <li class="nav-item dropdown data-12">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Materials</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <h6 class="dropdown-header" style = "color:black;font-style:italic">Exterior</h6>
+            <a class="dropdown-item" onclick = "lawm()">Lamworner</a>
+            <a class="dropdown-item" onclick = "shovel()">Shovel</a>
+             <h6 class="dropdown-header" style = "color:blue;font-style:italic">Flower boxes</h6>
+            
+            <a class="dropdown-item" onclick = "loadingPlant2('plant2')">Plant 1</a>
+            <a class="dropdown-item" onclick = "loadingPlant3('plant3')">Plant 2</a>
+            <div id = "ramps">
+              <h6 class="dropdown-header" style = "color:blue;font-style:bold;text-align:center">Ramps</h6>
+            <a class="dropdown-item" onclick = "loadingStandardRamp()">3’ 6” length (standard)</a>
+            <a class="dropdown-item"  onclick = "loadingBigRamp()">4’ 8” length</a>
+           </div>
+            <h6 class="dropdown-header" style = "color:blue;font-style:bold;text-align:center">Cupola</h6> 
+            <a class="dropdown-item"  onclick = "loadCupola('glassRef')">22" glass & copper</a>
+            <a class="dropdown-item"  onclick = "loadCupola('curvedRef')">22" Curved roof</a>
+            <a class="dropdown-item"  onclick = "loadCupola('cooperRef')">22" copper roof</a>
+            <a class="dropdown-item"  onclick = "loadCupola('asphaltRef')">22 Asphalt roof</a>
+            <a class="dropdown-item"  onclick = "loadCupola('None')">None</a>
+             <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header" style = "color:black;font-style:italic">Interior</h6> 
+         
+            <a class="dropdown-item" id = "lofting" onclick = "loadingLoft()">Loft  </a>
+             </a>
+
+            <a class="dropdown-item" onclick = "loadingLightBulb()">Light Bulb Socket</a>
+            <a class="dropdown-item" onclick = "receptablee()">receptable x 2</a>
+            <a class="dropdown-item" onclick = "loadingLightSwitch()">Light Switch</a>
+            <a class="dropdown-item" onclick = "loadingExteriorReceptable()">Exterior Receptable</a>
+            <a class="dropdown-item" onclick = "loadingPanelBox()">Panel box</a>
+            <a class="dropdown-item" onclick = "loadingJunctionBox()">Junction box</a>
+            
+          </div>
+        </li>
+        
+        <li class="nav-item" style = "list-style-type:none">
+          <button class="nav-link" href="tables.html" style = "background-color:blue;color:white">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Checkout ⤴️</span></button>
+        </li>
+
+
+      </ul>
+
+      
+
+
+      <div id="content-wrapper" class="pt-0">
+<div id = "TopT">
+        <div class="container-fluid p-0" id="stickyheader">
+          
+          <!-- Breadcrumbs-->
+          <ol class="breadcrumb mb-0 p-0">
+            <div class="breadcrumb-section-1">
+                <div class="breadcrumb-section-1-inner">
+                	<li class="breadcrumb-item"><a href="#">Shed model</a></li>
+                	<li style = "color:green;font-family:Helvetica" id = "sizeInfo" class="breadcrumb-item active"> Size : 8x10</li>
+                  <!-- <li style = "color:green;font-family:Helvetica" id = "sizeInfo" class="breadcrumb-item active">Package:</li>
+                    <li style = "color:green;font-family:Helvetica" id = "sizeInfo" class="breadcrumb-item active">Style:</li> --> 
+
+                </div>
+
+            </div>
+
+            <div class="breadcrumb-section-5">
+
+
+                <li>
+                	<button id = "switchB" onclick = "confirmMoving()" class="update_swetch">Update framing</button>
+                </li>
+                <li>
+                	<button id = "switchB" onclick = "stopRotate()" class="reset_swetch">Reset <i class="fas fa-undo-alt"></i></button>
+                </li>
+                
+                <!--
+            <li>
+              <label   id = "warningLabel" style = "margin-left:15px;color:red;font-style:italic"></label>
+            </li>
+      -->
+
+          
+ 
+
+            </div>
+
+     
+
+
+           
+            
+          
+        
+             <!--<li>
+
+              <button title = "Help" style = "margin-left:15px" onclick = "helpMsg()"><img src="https://img.icons8.com/color/30/000000/help.png"></button>
+            </li>-->
+            
+
+            <!-- 
+             <li>
+              <button id = "switchB" style = "margin-left:30px" onmousedown = "moveWindowLeft()" onmouseup = "stopMoving()">⇐</button>
+            </li>
+             <li>
+              <button id = "switchB" style = "margin-left:30px" onmousedown = "moveWindowRight()" onmouseup = "stopMoving()">⇒</button>
+            </li>
+
+            <li>
+              <button id = "switchB" style = "margin-left:30px" onmousedown = "moveDoorLeft()" onmouseup = "stopMoving()">⇐</button>
+            </li>
+             <li>
+              <button id = "switchB" style = "margin-left:30px" onmousedown = "moveDoorRight()" onmouseup = "stopMoving()">⇒</button>
+            </li>
+
+             <li>
+              <button id = "switchB" style = "margin-left:30px" onmousedown = "moveWindow2Right()" onmouseup = "stopMoving()">⇐</button>
+            </li>
+             <li>
+              <button id = "switchB" style = "margin-left:30px" onmousedown = "moveWindow2Left()" onmouseup = "stopMoving()">⇒</button>
+            </li>
+            -->
+           
+         
+
+
+          <!--
+             <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id ="dropingobj">Object
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" id = "objto">
+      <li>obj1</li>
+     
+    </ul>
+  </div>
+-->
+          </ol>
+          </div>
+       
+
+         
+          <!-- DataTables Example -->
+                <div id ="kaloch">
+             <canvas id = "myCanvas" style = "border:2px solid black">
+               </div>
+             </canvas>
+                <div class = "show" id = "rmenuSide">
+            <ul>
+              <li>
+              <button id = "adoor" onclick = "ADDD1()" style = "color:brown;font-family:Impact">Add door <img src="https://img.icons8.com/office/35/000000/door--v2.png"></button><button id = "adwind" onclick = "ADDD2()" style = "margin-left:10px;color:blue;font-family:Impact">Add window <img src="https://img.icons8.com/color/35/000000/open-window.png"></button><button onclick = "sortObjects()" id = "sort" style = "margin-left:10px;color:black;font-family:Impact">Sort objects<img src="reset.png"></button>
+            </button><button id = "addwork" onclick = "addWorkbench()" style = "margin-left:10px;color:black;font-family:Impact">Add WorkBench<img src="workbench.png"></button><button id = "addventscabana" onclick = "addventCabana()" style = "margin-left:10px;color:black;font-family:Impact">Add Vents</button><button id = "addloft" onclick = "loadingLofta()" style = "margin-left:10px;color:black;font-family:Impact">Add Loft<img src="workbench.png">
+
+           
+            
+              </li>
+
+            </ul>
+          </div>
+
+          <div class ="show"  id = "rmenuObject" style = "text-align:center">
+            <div id = "sthobj">
+            <ul>
+              <li>
+               <button id = "left" title="Left"  onmousedown = "moveShit(-0.02)" onmouseup = "stopMoving()"> <img src="left.png"> </button> 
+               <img id = "selobjmg" src = "">
+               <button id = "right" title ="Right" onmousedown = "moveShit(0.02)" onmouseup = "stopMoving()"> <img src="right.png"> </button>
+              </li>
+              <li>
+                <button id = "remove" title = "Remove Object" style = "font-family:Impact;color:red" onclick = "removeObject()"><img src="delete.png"></button>
+                <button title="Center object" style = "font-family:Impact;color:blue" onclick = "CENTER()"><img src="center.png"></button> 
+                
+                
+
+              </li>
+
+              
+                
+              
+              <li>
+                <button id = "details" title = "Details/options" style = "font-family:Impact;color:blue" onclick = "options()"><img src="https://img.icons8.com/metro/26/000000/view-details.png"></button>
+                <br>
+                 <button id = "switchHinge" title="Switch hinges" style = "font-family:Impact;color:black" onclick = "switchHinges()">Switch hinges</button>
+                 </div>
+                 <div id = "garageopt">
+                 <button id = "switchGlass" onclick = "switchglass()" title = "Switch glasses" style = "font-family:Impact;color:black">Switch Glasses</button>
+                  <button id = "details" title = "Details/options" style = "font-family:Impact;color:blue" onclick = "options()"><img src="https://img.icons8.com/metro/26/000000/view-details.png"></button>
+                  </div>
+                <br>
+                  <div id = "loft">
+                   <li>
+               <button id = "left" title="Left"  onmousedown = "moveShit(-0.02)" onmouseup = "stopMoving()"> <img src="left.png"> </button> 
+               <img id = "selobjmg" src = "">
+               <button id = "right" title ="Right" onmousedown = "moveShit(0.02)" onmouseup = "stopMoving()"> <img src="right.png"> </button>
+              </li>
+              <li>
+                <button id = "remove" title = "Remove Object" style = "font-family:Impact;color:red" onclick = "removeObject()"><img src="delete.png"></button>
+                <button title="Center object" style = "font-family:Impact;color:blue" onclick = "CENTER()"><img src="center.png"></button> 
+                <br>  
+                 <button id = "reduceSize" title="increase Size" style = "font-family:Impact;color:black" onclick = "changeSize(-0.07)">➖</button>
+                  <button id = "increaseSize" title="increase size" style = "font-family:Impact;color:black" onclick = "changeSize(0.07)">➕</button>
+
+
+                 </div>
+              </li>
+            </ul>
+          </div>
+             <script>
+$(document).ready(function(){
+  $('.dropdown a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+
+             <!-- INFO //////////////////////////////////// -->
+
+              
+           
+
+			
+
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer" id = "feet">
+
+            <div id ="kkk">
+               
+             
+             </div>
+            <div class="container-fluid my-auto">
+                <li>
+                	<div class="footer_status"><label style = "font-weight:bold">Loading status : </label><label style = "font-style:italic" id = "loadStatus" ></label></div>
+                </li>
+
+                <li>
+                
+                <ul>
+                    <div class="breadcrumb-section-4">
+                        <li class="breadcrumb-background">
+	                        <button id = "switchB"  onclick = "switchBackground()">Switch background <i class="fas fa-image"></i></button>
+                        </li>
+                    </div>
+                    <div class="breadcrumb-section-3">
+                        <li class="breadcrumb-title">
+	                        View
+                        </li>
+                        <li class="breadcrumb-view-control">
+                            <button id = "interior" onclick = "Interior()">Interior</button>
+                            <button id = "trans" onclick = "transparentt()">Transparent</button>
+                             <button id = "normalView" onclick = "interiorObjects()">Normal view></button>
+
+                        </li>
+                    </div>
+                    <div class="breadcrumb-section-2">
+                        <li class="breadcrumb-title">
+                        	Zoom
+                        </li>
+                        <li class="breadcrumb-zoom-in-out">
+                            <button title = "Zoom in" style = "margin-left:6px" onclick = "zoom()"><i class="fas fa-plus"></i></button>
+                            <button title = "Zoom out" style = "margin-left:15px" onclick = "dezoom()"><i class="fas fa-minus"></i></button>
+                        </li>
+                    </div>
+                    <!-- <button id="switchB" onclick = "confirmMoving()" class="button_estimate">Get Estimate <i class="fas fa-chevron-right"></i></button> -->
+                    <button id="switchB" onclick = "finish()" class="button_estimate">Get Estimate <i class="fas fa-chevron-right"></i></button>
+
+                </ul>
+                </li>
+                <!-- TO ADD Start
+                 <div id = "toAdd">
+            <li>
+          <select id = "selMaterial" style = "margin-left:15px" onChange= "selectMaterial(this.value)">
+          <option value ="none"></option>
+         
+          </select>   
+          </li>
+           <div class ="hide"  id = "rmenuMaterial" style = "text-align:center;margin-left:15px">
+            <ul>
+              <li>
+                <span id = "spanobj" style = "font-family:Impact;color:red;text-align:center">Light bulb socket</span> <br>
+               <button title="Left"  onclick = "moveMaterial(-0.02)" > <img src="left.png"> </button> 
+               <img id = "selobjmg" src = "">
+               <button title ="Right" onclick = "moveMaterial(0.02)"> <img src="right.png"> </button>
+              </li>
+              <li>
+                <button title = "Remove Object" style = "font-family:Impact;color:red" onclick = "removeMaterial()"><img src="delete.png"></button>
+                <button title="Center object" style = "font-family:Impact;color:blue" onclick = "moveMaterial('center')"><img src="center.png"></button> 
+              </li>
+            </ul>
+          </div>
+          <div> TO ADD END
+          --> 
+              <!--
+            <li>  
+              <textarea id = "textarea" style = "width:500px;height:50px"> </textarea>
+            </li>
+          
+            
+            <li>
+              <button  onclick = "executeCode()">Execute</button>
+            </li>
+          -->
+           <li style="visibility: hidden"> 
+               <div class="dropdown" style = "margin-left:15px">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id ="dropingobj">Object
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" id = "objto">
+      
+     
+    </ul>
+  </div>
+
+            </li>
+                <li>
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright © Shed builder 2018</span>
+                    </div>
+                </li>
+            </div>
+
+        </footer>
+
+      </div>
+      <!-- /.content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Page level plugin JavaScript-->
+    <!--<script src="vendor/chart.js/Chart.min.js"></script> -->
+    <script src="vendor/datatables/jquery.dataTables.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+
+    <!-- Demo scripts for this page-->
+
+
+    <script src="js/demo/datatables-demo.js"></script>
+    <!-- <script src="js/demo/chart-area-demo.js"></script> -->
+
+    <!-- INCLUDE REQUIRED THREE JS FILES -->
+    <script src = "Sources/three.js"></script>
+    <script src = "Sources/three.min.js"></script>
+    <script src = "Sources/OrbitControls.js"></script>
+    <script src = "Sources/TrackballControls.js"></script>
+    <script src = "Sources/Sky.js"></script>
+    <script src = "Sources/WebGL.js"></script>
+    <script src = "Sources/AssimpJSONLoader.js"></script>
+    <script src = "Sources/MTLLoader.js"></script>
+    <script src="Sources/EventsControls.js"></script>
+    <script src = "Sources/LoaderSupport.js"></script>
+    <script src = "Sources/OBJLoaderK.js"></script>
+    <script src="Sources/dat.gui.min.js"></script>
+    <script src = "Sources/Projector.js"></script>
+
+    <script src = "Sources/DragControls.js"></script>
+    <script src = "Sources/DDSLoader.js"></script>
+    <script src = "Sources/projector.js"></script>
+
+    <!-- THE JS FILE !! -->
+    <script src = "loadModels20.js"></script>
+    <script src = "shedbuilder25.js"></script>
+
+    <!-- THE JS FILE !! -->
+    
+<script>
+$(document).ready(function(e) {
+
+  $('.menu-nav .menu-nav-next').click(function(){
+
+	$(this).parent().parent().parent('li').removeClass('show');
+    $(this).parent().parent().parent().next('li').find('.dropdown-menu').removeClass('show');
+    $(this).parent().parent().parent().next('li a').click();
+    $(this).parent().parent().parent().next('li').addClass('show');
+    $(this).parent().parent().parent().next('li').find('.dropdown-menu').addClass('show');
+  });
+  $('.menu-nav .menu-nav-pre').click(function(){
+    $(this).parent().parent('li').removeClass('show');
+    $(this).parent().parent().prev('li').find('.dropdown-menu').removeClass('show');
+    $(this).parent().parent().prev('li a').click();
+	$(this).parent().parent().prev('li').addClass('show');
+    $(this).parent().parent().prev('li').find('.dropdown-menu').addClass('show');
+  });
+
+	$('.navbar-nav .nav-item a').click(function(e){
+    $(this).toggleClass('show');
+		if($('.navbar-nav .nav-item.data-1').hasClass('show')){
+			$('.navbar-nav .nav-item.data-1').removeClass('show');
+			$('.navbar-nav .nav-item.data-1 .dropdown-menu').removeClass('show');
+		}
+	});
+});
+/*
+	$('#wrapper ul.sidebar li.nav-item').click(function(e) {
+		posY = $(this).offset().top; 
+		var act_pos = posY - 74;
+		$(this).attr('data-id', act_pos);
+		var data_cstm = $(this).attr('data-id', act_pos);
+    $('.dropdown-menu').removeClass('act_pos');
+    $('#theTop .style').remove();
+	$('.dropdown-menu').addClass('act_pos');
+	if ($("#wrapper ul.sidebar li.nav-item").attr('data-id') == '') {
+		alert(data_cstm);
+		$('#theTop').append('<div class="style"><style> .act_pos{top: -'+ data_cstm + 'px !important}</style></div>');
+	}
+	else {
+		alert('ss');
+		$('#theTop').append('<div class="style"><style> .act_pos{top: -'+ act_pos + 'px !important}</style></div>');
+	}
+	});
+});*/
+
+$(window).scroll(function () {
+  if($(window).scrollTop() > 20) {
+    $("#stickyheader").addClass('sticky');
+  } else {
+    $("#stickyheader").removeClass('sticky');
+  }
+});
+
+</script>    
+  </body>
+
+</html>
